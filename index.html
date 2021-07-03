@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculadora">
+        <section class="pantalla">
+            <div>
+                <div id="consola"></div>
+            </div>
+        </section>
+        <section class="botones">
+            <button class="btn orange" onclick="borrar()" >C</button>
+            <button class="btn">+/-</button>
+            <button class="btn " onclick=" porcentaje()">%</button>
+            <button class="btn blue" onclick="division()">÷</button>
+            <button class="btn" id="9">9</button>
+            <button class="btn" id="7">7</button>
+            <button class="btn white" id="8">8</button>
+            <button class="btn blue" onclick="multiplicacion()">x</button>
+            <button class="btn" id="4">4</button>
+            <button class="btn" id="5">5</button>
+            <button class="btn" id="6">6</button>
+            <button class="btn blue" onclick="resta()">-</button>
+            <button class="btn" id="1">1</button>
+            <button class="btn" id="2">2</button>
+            <button class="btn" id="3">3</button>
+            <button class="btn blue " onclick="suma()">+</button>
+            <button class="btn" id="0" >0</button>
+            <button class="btn" id=".">.</button>
+            <button class="btn" onclick=" eliminar() ">
+                <img src="Vector.svg" alt="">
+            </button>
+            <button class="btn blueD" onclick="igual()">=</button>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

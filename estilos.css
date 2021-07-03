@@ -1,0 +1,78 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.calculadora{
+    height: 640px;
+    width: 360px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 65px;
+    align-items: center;
+    background: linear-gradient(180deg, #FEFEFE 0%, #E9ECEE 37.34%);
+
+}
+.btn{
+    
+    height: 61.0444450378418px;
+    width: 61.0444450378418px;
+    border-radius: 27.33333396911621px;
+    box-shadow: -3.644444465637207px -3.644444465637207px 4.55555534362793px 0px #FFFFFF;
+    box-shadow: 3.644444465637207px 3.644444465637207px 4.55555534362793px 0px #DEE0E3;
+    border: unset;
+    font-family: 'Roboto', sans-serif;
+    color: #627785;
+}
+.pantalla{
+    height: 110px;
+    width: 319px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pantalla div {
+    height: 87px;
+    width: 293px;
+    background-color: #A5A5A5;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.botones{
+    width: 100%;
+    height: 465px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+}
+
+.white {
+    height: 61.0444450378418px;
+    width: 61.0444450378418px;
+    border-radius: 27.33333396911621px;
+}
+
+.orange{
+    background-color: #FE9505;
+}
+.blue{
+    background-color: #D5D6E9;
+}
+
+.blueD{
+    background-color: #2D41F5;
+    color: white;
+}
+#consola{
+    height: 30.066665649414062px;
+    width: 237.79998779296875px;
+    font-family: 'Roboto', sans-serif;
+}

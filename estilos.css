@@ -36,6 +36,7 @@ body{
     border: unset;
     font-family: 'Roboto', sans-serif;
     color: #627785;
+    font-size: 22.78px;
 }
 .pantalla{
     height: 110px;
@@ -99,9 +100,9 @@ body{
     color: #627785; 
     transition: 0.1s all ease-in;
 }
-
-/*#suma:active{
-   
-    
-
-}*/
+#consola{
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color:#627785;
+}

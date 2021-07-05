@@ -15,7 +15,12 @@ let $btn7 = document.getElementById("7");
 let $btn8 = document.getElementById("8");
 let $btn9 = document.getElementById("9");
 let $consola = document.getElementById("consola");
+let $suma = document.getElementById("suma");
+let $resta = document.getElementById("resta");
+let $sustraccion = document.getElementById("sustraccion");
+let $division = document.getElementById("division");
 
+debugger
 //variables globales
 let numberOne;
 let numberTwo = 0;
@@ -77,6 +82,26 @@ $btnP.addEventListener('click', ()=>{
     opc = opc + number;
     $consola.innerHTML = opc;
 })
+$suma.addEventListener('click', ()=>{
+    $suma.style.backgroundColor="#5563E6";
+    $suma.style.color="white";
+    $suma.style.transition = "0.1s all ease-in";
+})
+$resta.addEventListener('click', ()=>{
+    $resta.style.backgroundColor="#5563E6";
+    $resta.style.color="white";
+    $resta.style.transition = "0.1s all ease-in";
+})
+$sustraccion.addEventListener('click', ()=>{
+    $sustraccion.style.backgroundColor="#5563E6";
+    $sustraccion.style.color="white";
+    $sustraccion.style.transition = "0.1s all ease-in";
+})
+$division.addEventListener('click', ()=>{
+    $division.style.backgroundColor="#5563E6";
+    $division.style.color="white";
+    $division.style.transition = "0.1s all ease-in";
+})
 
 //funciones de operaciones aritmeticas
 function suma() {
@@ -84,6 +109,7 @@ function suma() {
     numberOne = opc;
     opc = '';
     $consola.innerHTML = opc;
+
 }
 
 function porcentaje(){
@@ -117,6 +143,7 @@ function division() {
 function borrar(){
     $consola.innerHTML = ' ';
     opc = '';
+    resetColors();
 }
 function eliminar() {
     opc = opc.substring(0, opc.length-1);
@@ -129,6 +156,10 @@ function igual() {
     if (isfloat(numberOne) || isfloat(opc)) {
         numberTwo = parseFloat(opc);
         numberOne = parseFloat(numberOne);
+        
+        numberOne = Math.round(numberOne * 100)/100;
+        numberTwo = Math.round(numberTwo * 100)/100;
+
     } else {
         numberOne = parseInt(numberOne)
         numberTwo = parseInt(opc);
@@ -161,7 +192,7 @@ function igual() {
         default:
             break;
     }
-    
+    resetColors();
 }
 
 //verificacion de numeros decimales
@@ -174,4 +205,15 @@ function isfloat(n) {
        } 
     }
     return false;
+}
+
+function resetColors() {
+    $suma.style.backgroundColor="#D5D6E9";
+    $suma.style.color="#111C81";
+    $resta.style.backgroundColor="#D5D6E9";
+    $resta.style.color="#111C81";
+    $sustraccion.style.backgroundColor="#D5D6E9";
+    $sustraccion.style.color="#111C81";
+    $division.style.backgroundColor="#D5D6E9";
+    $division.style.color="#111C81";
 }

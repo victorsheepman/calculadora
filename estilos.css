@@ -6,6 +6,7 @@
 }
 body{
     background-image: url("Calculator.png");
+    background-size: 100%;
     background-color: #f0f0f0;
     background-position-x: 99%;
     background-repeat: no-repeat;

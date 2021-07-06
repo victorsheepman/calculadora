@@ -1,5 +1,46 @@
 let opc;
 opc = '';
+function Null(btn) {
+    debugger
+    if(btn === $suma){
+        $resta = 0;
+        $resta.onclick = undefined;
+        $sustraccion = 0;
+        $sustraccion.onclick = undefined;
+        $division = 0;
+        $division.onclick = undefined;
+    }else if(btn === $resta){
+        $suma = 0;
+        $suma.onclick = undefined;
+        $sustraccion = 0;
+        $sustraccion.onclick = undefined
+        $division = 0;
+        $division.onclick = undefined;
+    }else if(btn === $sustraccion){
+        $suma = 0;
+        $suma.onclick = undefined;
+        $resta = 0;
+        $resta.onclick = undefined;
+        $division = 0;
+        $division.onclick = undefined;
+    }else if(btn === $division){
+        $suma = 0;
+        $suma.onclick = undefined;
+        $resta = 0;
+        $resta.onclick = undefined; 
+        $sustraccion = 0;
+        $sustraccion.onclick = undefined;
+    }
+}
+
+
+
+function reset() {
+    $suma = document.getElementById("suma");
+    $resta = document.getElementById("resta");
+    $sustraccion = document.getElementById("sustraccion");
+    $division = document.getElementById("division");
+}
 
 //variaable del Dom
 let $btnPorcent = document.getElementById("%");
@@ -86,30 +127,37 @@ $suma.addEventListener('click', ()=>{
     $suma.style.backgroundColor="#5563E6";
     $suma.style.color="white";
     $suma.style.transition = "0.1s all ease-in";
+    Null($suma); 
 })
 $resta.addEventListener('click', ()=>{
     $resta.style.backgroundColor="#5563E6";
     $resta.style.color="white";
     $resta.style.transition = "0.1s all ease-in";
+    Null($resta); 
 })
 $sustraccion.addEventListener('click', ()=>{
     $sustraccion.style.backgroundColor="#5563E6";
     $sustraccion.style.color="white";
     $sustraccion.style.transition = "0.1s all ease-in";
+    Null($sustraccion);
 })
 $division.addEventListener('click', ()=>{
     $division.style.backgroundColor="#5563E6";
     $division.style.color="white";
     $division.style.transition = "0.1s all ease-in";
+    Null($division); 
 })
 
 //funciones de operaciones aritmeticas
-function suma() {
-    signo = '+';
-    numberOne = opc;
-    opc = '';
-    $consola.innerHTML = opc;
 
+$suma.onclick = () => {
+    if ($suma === 0) {
+    }else{
+        signo = '+';
+        numberOne = opc;
+        opc = '';
+        $consola.innerHTML = opc;
+    }
 }
 
 function porcentaje(){
@@ -119,24 +167,36 @@ function porcentaje(){
     $consola.innerHTML = opc;
 }
 
-function resta(){
-    signo = '-';
-    numberOne = opc;
-    opc = '';
-    $consola.innerHTML = opc;
+$resta.onclick = ()=>{
+    if ($resta === 0) {
+    }else{
+        signo = '-';
+        numberOne = opc;
+        opc = '';
+        $consola.innerHTML = opc;
+    }
+   
 }
 
-function multiplicacion() {
-    signo = '*';
-    numberOne = opc;
-    opc = '';
-    $consola.innerHTML = opc;
+$sustraccion.onclick =  ()=>{
+    if ($sustraccion === 0) {
+    }else{
+        signo = '*';
+        numberOne = opc;
+        opc = '';
+        $consola.innerHTML = opc;
+    }
+    
 }
-function division() {
-    signo = '/';
-    numberOne = opc;
-    opc = '';
-    $consola.innerHTML = opc;
+$division.onclick = ()=>{
+    if ($division === 0) {
+    }else{
+        signo = '/';
+        numberOne = opc;
+        opc = '';
+        $consola.innerHTML = opc
+    }
+    ;
 }
 
 //funciones de la calculadora
@@ -151,6 +211,7 @@ function eliminar() {
 }
 function igual() {
     let result = 0;
+    reset();
 
     //verificacion de numeros decimales
     if (isfloat(numberOne) || isfloat(opc)) {
